@@ -6,6 +6,11 @@
     font-style: normal;
 }
 
+@mixin sm-size{
+    @media (max-width: 768px){
+        @content;
+    }
+}
 
 .social-btn-float{
     display: flex;
@@ -100,6 +105,9 @@
     transition: 0.4s ease all;
     max-width: calc(100%-50px);
     direction: rtl;
+    @include sm-size(){
+        width: 300px;
+    }
     &.lunch{
         opacity: 1;
         bottom: 150px;

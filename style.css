@@ -118,6 +118,12 @@
   direction: rtl;
 }
 
+@media (max-width: 768px) {
+  .social-box-float {
+    width: 300px;
+  }
+}
+
 .social-box-float.lunch {
   opacity: 1;
   bottom: 150px;
