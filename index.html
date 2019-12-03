@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="social-btn-float">
+        <div class="text">
+            نیاز به کمک دارید؟ <strong>پیام دهید</strong>
+        </div>
+        <div class="btn-container" id="btnContainer"></div>
+    </div>
+    <div class="social-box-float">
+        <div class="box-head">
+            <div class="title">پشتیبانی company name فارسی</div>
+            <div class="intro">سلام! روی کارشناس مورد نظر کلید کنید تا در Whatsapp چت کنید</div>
+        </div>
+        <div class="box-body">
+            <div class="notice">معمولا کمتر از چند دقیقه جواب داده خواهد شد</div>
+            <div class="list">
+                <div class="list-item">
+                    <a target="_blank" href="#" class="list-link">
+                        <div class="avatar">
+                            <div class="avatar-icon"></div>
+                        </div>
+                        <div class="name">محمدرضا</div>
+                    </a>
+                </div>
+                <div class="list-item">
+                    <a target="_blank" href="#" class="list-link">
+                        <div class="avatar">
+                            <div class="avatar-icon"></div>
+                        </div>
+                        <div class="name">محمدرضا</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var btn = document.querySelector('.btn-container');
+        var text = document.querySelector('.text');
+        var popUp = document.querySelector('.social-box-float');
+
+        var isOpen = false;
+        btn.addEventListener('click', function(){
+            isOpen = !isOpen;
+            if(isOpen === true){
+                btn.className = 'btn-container open';
+                text.className = 'text vanishing';
+                popUp.className = 'social-box-float lunch';
+            }else{
+                btn.className = 'btn-container';
+                text.className = 'text';
+                popUp.className = 'social-box-float';
+            }
+        });
+    </script>
+</body>
+</html>
